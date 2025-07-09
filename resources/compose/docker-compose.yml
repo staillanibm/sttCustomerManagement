@@ -1,0 +1,11 @@
+services:
+  msr-customers:
+    image: ghcr.io/staillanibm/msr-customers:0.0.1
+    ports:
+      - "15555:5555"
+    env_file:
+      - .env
+    volumes:
+      - ./application.properties:/opt/softwareag/IntegrationServer/application.properties
+
+
