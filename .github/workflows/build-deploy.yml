@@ -61,7 +61,6 @@ jobs:
       - name: Update kustomization.yaml with new tag
         run: |
           cd sttCustomerManagementDeploy
-          ls -l
           export IMAGE_TAG="${{ needs.build-and-push.outputs.image_tag }}"
           yq -i '.images[] |= select(.name == "ghcr.io/staillanibm/msr-customers").newTag = strenv(IMAGE_TAG)' kustomization.yaml
 
