@@ -1,4 +1,4 @@
-FROM ibmhybridcr.azurecr.io/webmethods-edge-runtime:11.1.0 as builder
+FROM iwhicr.azurecr.io/webmethods-edge-runtime:11.2.0 as builder
 
 ARG WPM_TOKEN
 
@@ -10,7 +10,7 @@ USER 0
 RUN chgrp -R 0 /opt/softwareag && chmod -R g=u /opt/softwareag
 
 
-FROM ibmhybridcr.azurecr.io/webmethods-edge-runtime:11.1.0
+FROM iwhicr.azurecr.io/webmethods-edge-runtime:11.2.0
 
 USER 1724
 
