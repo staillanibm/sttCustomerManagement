@@ -80,7 +80,7 @@ spec:
       securityContext: {}  
       containers:
         - name: edge-runtime
-          image: ghcr.io/staillanibm/msr-customers:0.0.2
+          image: ghcr.io/staillanibm/msr-customers:latest
           imagePullPolicy: Always
           volumeMounts:
             - name: application-properties
